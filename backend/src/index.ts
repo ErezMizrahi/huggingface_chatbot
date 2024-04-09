@@ -1,4 +1,9 @@
 import { server, io } from "../src/app";
+import dotenv from 'dotenv'
+dotenv.config();
+
+if(!process.env.HF_TOKEN) throw new Error('HF_TOKEN must be defiend!');
+
 
 process.on('SIGINT', async () =>  {
   io.disconnectSockets();

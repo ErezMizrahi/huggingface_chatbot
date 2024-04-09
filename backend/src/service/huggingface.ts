@@ -1,20 +1,11 @@
 import { HfInference } from "@huggingface/inference";
+import { BotResponse } from "../types/bot.types";
 
-interface Message { 
-    msg: string;
-    date: string;
-}
-
-interface BotResponse {
-    sender: Message;
-    bot: Message
-}
 
 class HFBot {
 
-    constructor(private readonly hf = new HfInference('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')) {
+    constructor(private readonly hf = new HfInference(process.env.HF_TOKEN)) {
         console.log('connected to hugging face...');
-        
     }
         
     async Question(question: string): Promise<BotResponse> {
