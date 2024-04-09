@@ -1,0 +1,65 @@
+.chatRoom {
+    display: grid;
+    grid-template-rows: 1fr 100px;
+
+}
+
+.chatInputContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+textarea {
+    width: 90%;
+    height: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+}
+
+button {
+    background-color: rgb(16, 129, 235);
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+}
+
+.conversationContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.conversationMessageContainer { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.conversationMessageContainer > :nth-child(1n) {
+    background-color: rgb(16, 129, 235);
+    color: white;
+}
+
+.conversationMessageContainer > :nth-child(2n) {
+    background-color: rgb(202, 202, 202);
+    color: black;
+}
+
+.bubble {
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 5px;
+}
